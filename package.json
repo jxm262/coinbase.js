@@ -1,0 +1,40 @@
+{
+  "name": "coinbase.js",
+  "version": "0.1.0",
+  "description": "A promise based Node.js wrapper for the Coinbase exchange api",
+  "main": "lib/coinbase",
+  "scripts": {
+    "test": "mocha test -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxm262/coinbase.js.git"
+  },
+  "keywords": [
+    "bitfinex",
+    "node",
+    "node.js",
+    "coinbase",
+    "coinbase-promises"
+  ],
+  "author": "Justin Maat <jxm262@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jxm262/coinbase.js/issues"
+  },
+  "homepage": "https://github.com/jxm262/coinbase.js",
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.1",
+    "sinon-chai": "^2.7.0"
+  },
+  "dependencies": {
+    "blueagent": "^1.0.0",
+    "crypto": "0.0.3",
+    "joi": "^6.0.8",
+    "lodash": "^3.6.0",
+    "microtime": "^1.2.0",
+    "spice": "^1.0.2"
+  }
+}
