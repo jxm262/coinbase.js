@@ -26,7 +26,7 @@ describe('Coinbase', function () {
         sandbox.restore();
     });
 
-    it('contains prototype functions for unauthenticated apis', function () {
+    it('loads all unauthenticated apis into functions on prototype', function () {
         var unauthenticatedMethods = apis.unauthenticated;
         Coinbase.constructor.prototype.should.contain.all.keys(unauthenticatedMethods);
     });
