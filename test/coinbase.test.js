@@ -1,4 +1,4 @@
-var Coinbase = require('../lib/coinbase')
+var coinbase = require('../lib/coinbase')({key: 'testKey', secret: 'testSecret'})
     , apis = require('../lib/apis')
     , request = require('blueagent')
     , sinon = require('sinon')
@@ -12,7 +12,6 @@ chai.use(sinonChai);
 describe('Coinbase', function () {
 
     var sandbox;    //to clean up stubs on each test
-    var coinbase;
 
     //before(function () {
     //    coinbase = new Coinbase();
@@ -28,7 +27,12 @@ describe('Coinbase', function () {
 
     it('loads all unauthenticated apis into functions on prototype', function () {
         var unauthenticatedMethods = apis.unauthenticated;
-        Coinbase.constructor.prototype.should.contain.all.keys(unauthenticatedMethods);
+        coinbase.constructor.prototype.should.contain.all.keys(unauthenticatedMethods);
+    });
+
+    it('loads all authenticated apis into functions on prototype', function () {
+        var authenticatedMethods = apis.authenticated;
+        coinbase.constructor.prototype.should.contain.all.keys(authenticatedMethods);
     });
 
 });
